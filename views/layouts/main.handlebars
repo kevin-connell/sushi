@@ -2,16 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../public/assets/css/sushi_style.css">
-    <title>SUSHI</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/assets/css/sushi_style.css" type="text/css" />
+	<title>SUSHI TIME</title>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/assets/js/sushi.js"></script>
 </head>
 
 <body>
-    <main id="big_container"></main>
     <h2 id="title">Eat Sushi Now</h2>
-    {{{ body }}}
+    <img id="mainImg" src="/assets/img/sushiPic.png" alt="sushi picture" style="width: 100px;">
+    {{{body}}}
+    <form class="create-form">
+
+        <div class="form-group">
+            <label for="su">Name:</label>
+            <input type="text" id="su" name="name">
+        </div>
+
+        <button type="submit">Add Sushi</button>
+    </form>
+
+
 </body>
 
 </html>

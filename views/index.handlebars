@@ -1,0 +1,26 @@
+<h2>Ready to eat</h2>
+
+<ul>
+    {{#each sushi}}
+        {{#unless eaten}}
+            <li>
+                {{name}}
+                <button class="eatenBtn" data-id="{{id}}">
+                    EAT!
+                </button>
+            </li>
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Already Eaten</h2>
+
+<ul>
+    {{#each sushi}}
+        {{#if eaten}}
+            <li>
+                {{name}}
+            </li>
+        {{/if}}
+    {{/each}}
+</ul>
