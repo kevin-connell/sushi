@@ -1,26 +1,31 @@
-<h2>Ready to eat</h2>
+<main class="eighty mx-auto row d-flex justify-content-center">
 
-<ul>
-    {{#each sushi}}
-        {{#unless eaten}}
-            <li>
-                {{name}}
-                <button class="eatenBtn" data-id="{{id}}">
-                    EAT!
-                </button>
-            </li>
-        {{/unless}}
-    {{/each}}
-</ul>
+    <div class="sushiTable mx-auto">
+        <h2 class="text-center">Ready to eat</h2>
+        <table class="table table-borderless">
+            <tbody>
+                {{#each sushi}}
+                {{#unless eaten}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td><button class="btn btn-primary eatenBtn" data-id="{{id}}">
+                            EAT!
+                        </button></td>
+                </tr>
+                {{/unless}}
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
 
-<h2>Already Eaten</h2>
 
-<ul>
-    {{#each sushi}}
+    <div class="sushiTable mx-auto">
+        <h2 class="text-center">Already Eaten</h2>
+        {{#each sushi}}
         {{#if eaten}}
-            <li>
-                {{name}}
-            </li>
+        <p class="text-center" style="margin-top: 20px;">{{name}}</p>
         {{/if}}
-    {{/each}}
-</ul>
+        {{/each}}
+    </div>
+
+</main>

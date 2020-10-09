@@ -2,28 +2,36 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="/assets/css/sushi_style.css" type="text/css" />
-	<title>SUSHI TIME</title>
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="/assets/js/sushi.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/sushi_style.css" type="text/css" />
+    <title>SUSHI TIME</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
-<body>
-    <h2 id="title">Eat Sushi Now</h2>
-    <img id="mainImg" src="/assets/img/sushiPic.png" alt="sushi picture" style="width: 100px;">
-    {{{body}}}
-    <form class="create-form">
+<body class="col">
+    <h1 class="text-center mx-auto toptall" id="title">Eat Sushi Now</h1>
+    <img class="rounded mx-auto d-block" id="mainImg" src="/assets/img/sushiPic.png" alt="sushi picture">
+
+    <form class="d-flex justify-content-center create-form">
 
         <div class="form-group">
             <label for="su">Name:</label>
             <input type="text" id="su" name="name">
+            <button class="btn btn-primary" type="submit">ADD</button>
         </div>
 
-        <button type="submit">Add Sushi</button>
     </form>
 
 
+    {{{body}}}
+
+    
+	<script src="/assets/js/sushi.js"></script>
+
 </body>
+
+</html>
 
 </html>
