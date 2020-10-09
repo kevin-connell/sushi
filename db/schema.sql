@@ -1,0 +1,11 @@
+DROP DATABASE IF EXISTS sushi_db;
+
+CREATE DATABASE sushi_db;
+USE sushi_db;
+
+CREATE TABLE sushi (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR (25) NOT NULL,
+    eaten BOOLEAN DEFAULT FALSE,
+    PRIMARY KEY (id)
+);
