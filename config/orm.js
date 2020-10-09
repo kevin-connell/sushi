@@ -19,9 +19,7 @@ class ORM {
 
     insertOne(table, name, cb) {
 
-        console.log(`INSERT INTO ${table} (name) VALUES ?`)
-
-        connection.query("INSERT INTO ?? (name) VALUES ?", [table, name], function(err, result) {
+        connection.query("INSERT INTO ?? (name) VALUES (?)", [table, name], function(err, result) {
             if (err) {
               throw err;
             }
