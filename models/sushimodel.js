@@ -1,7 +1,7 @@
 var orm = require("../config/orm");
 
 var sushi = {
-    
+
   all: function(cb) {
     orm.selectAll("sushi", function(res) {
       cb(res);
@@ -9,13 +9,13 @@ var sushi = {
   },
 
   create: function(name, cb) {
-    orm.create("sushi", name, function(res) {
+    orm.insertOne("sushi", name, function(res) {
       cb(res);
     });
   },
 
   update: function(eaten, id, cb) {
-    orm.update("sushi", eaten, id, function(res) {
+    orm.updateOne("sushi", eaten, id, function(res) {
       cb(res);
     });
   }

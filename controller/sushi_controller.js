@@ -14,9 +14,11 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/sushi", function (req, res) {
-    
-    console.log(req.body.name)
 
+    console.log(`${req.body.name} is being requested to be MADE`);
+    // res.status(200).end();
+
+    newName = `(${req.body.name})`
 
     sushi.create(req.body.name, function (result) {
         res.json({ id: result.insertId });

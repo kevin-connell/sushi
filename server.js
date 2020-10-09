@@ -15,7 +15,6 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 var routes = require("./controller/sushi_controller");
-console.log(routes)
 
 app.use(routes);
 

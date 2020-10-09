@@ -4,7 +4,7 @@ $(function () {
         var id = $(this).data("id");
 
         var eatenState = {
-            eaten: true
+            eaten: 1
         }
 
         console.log(id + " eat button pressed")
@@ -20,7 +20,7 @@ $(function () {
         );
     });
 
-    $(".submitSushi").on("submit", function (event) {
+    $(".create-form").on("submit", function (event) {
 
         event.preventDefault();
 

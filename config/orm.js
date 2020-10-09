@@ -19,7 +19,9 @@ class ORM {
 
     insertOne(table, name, cb) {
 
-        connection.query("INSERT INTO ?? SET ?", [table, name], function(err, result) {
+        console.log(`INSERT INTO ${table} (name) VALUES ?`)
+
+        connection.query("INSERT INTO ?? (name) VALUES ?", [table, name], function(err, result) {
             if (err) {
               throw err;
             }
@@ -30,6 +32,8 @@ class ORM {
     };
 
     updateOne(table, eaten, id, cb) {
+
+        console.log(table + eaten + id)
 
         connection.query("UPDATE ?? SET eaten = ? WHERE id = ?",
         [table, eaten, id], function(err, result) {
